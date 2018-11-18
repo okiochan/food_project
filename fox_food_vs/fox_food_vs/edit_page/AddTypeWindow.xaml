@@ -1,0 +1,30 @@
+﻿<Window x:Class="fox_food_vs.frige_page.AddTypeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fox_food_vs.frige_page"
+        mc:Ignorable="d"
+        Title="AddTypeWindow" Height="300" Width="300">
+
+    <StackPanel>
+
+        <TextBlock  HorizontalAlignment="Center" Text="add food type" FontWeight="Bold"  FontSize="15"/>
+
+        <TextBlock  HorizontalAlignment="Center" Text="set title" FontSize="15"/>
+        <TextBox x:Name="txtTitle"  Text="unknown"></TextBox>
+
+        <TextBlock  HorizontalAlignment="Center" Text="set ccal" FontSize="15"/>
+        <TextBox x:Name="txtCcal" Text="-1"></TextBox>
+
+        <TextBlock  HorizontalAlignment="Center" Text="set GI" FontSize="15"/>
+        <TextBox x:Name="txtGI" Text="-1"></TextBox>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="10" x:Name="btnApply" Click="btnApply_Click">apply</Button>
+            <Button Margin="10" x:Name="btnDiscard" Click="btnDiscard_Click">discard</Button>
+        </StackPanel>
+
+    </StackPanel>
+    
+</Window>

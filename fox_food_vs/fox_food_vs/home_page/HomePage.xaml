@@ -1,0 +1,20 @@
+﻿<Page x:Class="fox_food_vs.pages.home_page.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:fox_food_vs.pages.home_page"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300" Loaded="Page_Loaded"
+      Title="HomePage">
+
+    <StackPanel >
+        <Image x:Name="img" Stretch="Fill"/>
+
+        <StackPanel x:Name="panelFirst" Orientation="Horizontal">
+            <Image x:Name="imgFrige" Stretch="Fill"/>
+            <Button x:Name="btnFrige" Width="50" Click="btnFrige_Click">go to</Button>
+        </StackPanel>
+        
+    </StackPanel>
+</Page>

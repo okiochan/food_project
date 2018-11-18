@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fox_food_vs", "fox_food_vs\fox_food_vs.csproj", "{B3963B0B-23B9-4F77-90CA-BC7C2D6103DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3963B0B-23B9-4F77-90CA-BC7C2D6103DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3963B0B-23B9-4F77-90CA-BC7C2D6103DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3963B0B-23B9-4F77-90CA-BC7C2D6103DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3963B0B-23B9-4F77-90CA-BC7C2D6103DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
