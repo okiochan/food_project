@@ -1,4 +1,5 @@
 ﻿using fox_food_vs.classes;
+using fox_food_vs.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,8 @@ namespace fox_food_vs.pages.frige_page
     /// </summary>
     public partial class AddFolderWindow : Window
     {
-        private Folder ff;
-        public AddFolderWindow(Folder ff)
+        private FoodFolder ff;
+        public AddFolderWindow(FoodFolder ff)
         {
             InitializeComponent();
             this.ff = ff;
@@ -29,11 +30,11 @@ namespace fox_food_vs.pages.frige_page
         private void Window_Loaded(object sender, RoutedEventArgs e) {
 
         }
-
+        
+        // save to DB
         private void btnApply_Click(object sender, RoutedEventArgs e) {
             ff.title = txtTitle.Text;
-            ff.img = new BitmapImage() ; //fix it!
-            
+            ff.img = "none";
             DialogResult = true;
         }
 

@@ -71,7 +71,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="classes\Folder.cs" />
+    <Compile Include="classes\FoodFolder.cs" />
     <Compile Include="classes\FoodType.cs" />
     <Compile Include="DB\DBfunc.cs" />
     <Compile Include="edit_page\AddTypeWindow.xaml.cs">

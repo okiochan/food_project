@@ -12,34 +12,7 @@ namespace fox_food_vs {
     /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
-
-            //READER
-            //var c = DBfunc.GetDBConnection();
-            //c.Open();
-            //string sql = " SELECT * FROM tbFoodFolder  ";
-            //MySqlCommand cmd = new MySqlCommand(sql, c);
-            //MySqlDataReader reader = cmd.ExecuteReader();
-            //while (reader.Read()) {
-            //    int txt = reader.GetInt32("id");
-            //    string txt2 = reader.GetString("img");
-            //}
-        
-            //INSERT
-            //MySqlConnection conn = DBfunc.GetDBConnection();
-            //conn.Open();
-            //string query = "insert into tbFoodFolder (title,img) values (@var1,@var2)";
-            //MySqlCommand cmd = new MySqlCommand(query, conn);
-            //cmd.Parameters.AddWithValue("@var1", "dfsdf");
-            //cmd.Parameters.AddWithValue("@var2", "aaasas");
-            //cmd.Prepare();
-            //cmd.ExecuteNonQuery();
-
-
-
-
             InitializeComponent();
-
-
         }
 
         //event
