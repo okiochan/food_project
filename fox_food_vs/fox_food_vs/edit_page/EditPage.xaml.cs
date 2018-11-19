@@ -28,9 +28,12 @@ namespace fox_food_vs.pages.frige_page
         }
 
         private void btnAddFolder_Click(object sender, RoutedEventArgs e) {
-            AddFolderWindow wind = new AddFolderWindow();
+            Folder ff = new Folder();
+            AddFolderWindow wind = new AddFolderWindow(ff);
             if (wind.ShowDialog() == true) {
-                
+                //save to BD!
+
+
             }else {
                 //MessageBox.Show("Info not saved =(");
             }
