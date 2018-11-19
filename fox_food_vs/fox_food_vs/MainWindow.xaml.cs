@@ -1,8 +1,10 @@
-﻿using fox_food_vs.DB;
+﻿using fox_food_vs.classes;
+using fox_food_vs.DB;
 using fox_food_vs.MyEventArgs;
 using fox_food_vs.pages.frige_page;
 using fox_food_vs.pages.home_page;
 using MySql.Data.MySqlClient;
+using System.IO;
 using System.Windows;
 using static fox_food_vs.pages.home_page.HomePage;
 
@@ -12,6 +14,17 @@ namespace fox_food_vs {
     /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
+
+            //Folder ff = new Folder();
+            //AddFolderWindow wnd = new AddFolderWindow(ff);
+            //wnd.ShowDialog();
+
+            //DirectoryInfo d = new DirectoryInfo(@".");//Assuming Test is your Folder
+            //FileInfo[] Files = d.GetFiles(); //Getting Text files
+            //string str = "";
+            //foreach (FileInfo file in Files) {
+            //    str = str + ", " + file.Name;
+            //}
 
             //READER
             //var c = DBfunc.GetDBConnection();
@@ -23,7 +36,7 @@ namespace fox_food_vs {
             //    int txt = reader.GetInt32("id");
             //    string txt2 = reader.GetString("img");
             //}
-        
+
             //INSERT
             //MySqlConnection conn = DBfunc.GetDBConnection();
             //conn.Open();
