@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fox_food_vs.frige_page"
-        mc:Ignorable="d"
+        mc:Ignorable="d" Loaded="Window_Loaded"
         Title="AddTypeWindow" Height="300" Width="300">
 
     <StackPanel>
@@ -20,10 +20,16 @@
         <TextBlock  HorizontalAlignment="Center" Text="set GI" FontSize="15"/>
         <TextBox x:Name="txtGI" Text="-1"></TextBox>
 
+        <TextBlock  HorizontalAlignment="Center" Text="select group for food type" FontSize="15"/>
+        <ComboBox Name="comboFolders" Height="30" VerticalAlignment="Top">
+        </ComboBox>
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Margin="10" x:Name="btnApply" Click="btnApply_Click">apply</Button>
             <Button Margin="10" x:Name="btnDiscard" Click="btnDiscard_Click">discard</Button>
         </StackPanel>
+        
+        
 
     </StackPanel>
     
