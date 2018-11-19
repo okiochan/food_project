@@ -1,4 +1,5 @@
 ﻿using fox_food_vs.classes;
+using fox_food_vs.DB;
 using fox_food_vs.frige_page;
 using System;
 using System.Collections.Generic;
@@ -28,13 +29,12 @@ namespace fox_food_vs.pages.frige_page
         }
 
         private void btnAddFolder_Click(object sender, RoutedEventArgs e) {
-            Folder ff = new Folder();
+            FoodFolder ff = new FoodFolder();
             AddFolderWindow wind = new AddFolderWindow(ff);
+
             if (wind.ShowDialog() == true) {
-                //save to BD!
-
-
-            }else {
+                DBfunc.InsertFoodFolder(ff);
+            } else {
                 //MessageBox.Show("Info not saved =(");
             }
         }
@@ -43,8 +43,9 @@ namespace fox_food_vs.pages.frige_page
 
             FoodType ft = new FoodType();
             AddTypeWindow wind = new AddTypeWindow(ft);
-            if (wind.ShowDialog() == true) {
 
+            if (wind.ShowDialog() == true) {
+                DBfunc.InsertFoodType(ft);
             } else {
                 //MessageBox.Show("Info not saved =(");
             }

@@ -49,10 +49,7 @@ namespace fox_food_vs {
 
 
 
-
             InitializeComponent();
-
-
         }
 
         //event
