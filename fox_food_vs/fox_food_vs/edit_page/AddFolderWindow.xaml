@@ -5,25 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fox_food_vs.pages.frige_page"
         mc:Ignorable="d" Loaded="Window_Loaded"
-        Title="AddFolderWindow" Height="300" Width="300">
+        Title="AddFolderWindow" Height="500" Width="400">
 
     <StackPanel>
 
         <TextBlock  HorizontalAlignment="Center" Text="add folder" FontWeight="Bold"  FontSize="15"/>
 
         <TextBlock  HorizontalAlignment="Center" Text="set title" FontSize="15"/>
-        <TextBox x:Name="txtTitle"></TextBox>
+        <TextBox x:Name="txtTitle" Text="unknown"></TextBox>
 
         <TextBlock  HorizontalAlignment="Center" Text="choose icon" FontSize="15"/>
+
+        <WrapPanel Orientation="Horizontal" Name="imagePanel">
+        </WrapPanel>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Margin="10" x:Name="btnApply" Click="btnApply_Click">apply</Button>
             <Button Margin="10" x:Name="btnDiscard" Click="btnDiscard_Click">discard</Button>
         </StackPanel>
-
-        <WrapPanel Orientation="Horizontal" Name="imagePanel">
-            
-        </WrapPanel>
 
     </StackPanel>
     

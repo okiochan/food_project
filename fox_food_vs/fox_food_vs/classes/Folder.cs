@@ -6,22 +6,22 @@ using System.Windows.Media.Imaging;
 
 namespace fox_food_vs.classes
 {
-    public class FoodFolder
+    public class Folder
     {
-        public string img;
+        public string imgPath;
         public int id;
         public string title;
 
-        public FoodFolder() {
-            img = "none";
+        public Folder() {
+            imgPath = "none";
             id = -1;
             title = "unknown";
         }
 
-        public FoodFolder(int id, string img, string title) {
+        public Folder(int id, string img, string title) {
             this.id = id;
             this.title = title;
-            this.img = img;
+            this.imgPath = img;
         }
     }
 }

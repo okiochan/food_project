@@ -15,39 +15,59 @@ namespace fox_food_vs.pages.home_page {
             InitializeComponent();
         }
 
-        private void Repaint() {
-
+        private BitmapImage createImg(string name) {
             var bitmap = new BitmapImage();
-            using (var stream = new FileStream("../../img/main_window/title.png", FileMode.Open)) {
-                bitmap.BeginInit();
-                bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                bitmap.StreamSource = stream;
-                bitmap.EndInit();
-                bitmap.Freeze(); // optional
-            }
-            img.Source = bitmap;
-            img.Width = 594;
-            img.Height = 80;
+            string path = "../../../img/main_window/" + name;
 
-            bitmap = new BitmapImage();
-            using (var stream = new FileStream("../../img/main_window/frige.png", FileMode.Open)) {
+            using (var stream = new FileStream(path, FileMode.Open)) {
                 bitmap.BeginInit();
                 bitmap.CacheOption = BitmapCacheOption.OnLoad;
                 bitmap.StreamSource = stream;
                 bitmap.EndInit();
-                bitmap.Freeze(); // optional
+                bitmap.Freeze();
             }
-            imgFrige.Source = bitmap;
-            imgFrige.Width = 287;
-            imgFrige.Height = 300;
+            return bitmap;
+        }
+
+        private void Repaint() {
+            img.Source = createImg("title.png");
+            img.MaxWidth = 500;
+
+            imgFrige.Source = createImg("frige.png");
+            imgFrige.MaxHeight = 250;
+
+            imgGI.Source = createImg("gi_table.png");
+            imgGI.MaxHeight = 200;
+
+            imgRecipies.Source = createImg("recipies.png");
+            imgRecipies.MaxHeight = 300;
+
+
         }
        
         private void Page_Loaded(object sender, RoutedEventArgs e) {
             Repaint();
         }
         
-        private void btnFrige_Click(object sender, RoutedEventArgs e) {
-            OnHandlerRepaintMainPage(new EventArgsWithString { str = "Frige" });
+        private void btnGoToClick(object sender, RoutedEventArgs e) {
+
+            string a = ((Button)sender).Name;
+
+            switch (((Button)sender).Name) {
+                case "btnFrige":
+                    OnHandlerRepaintMainPage(new EventArgsWithString { str = "Frige" });
+                    break;
+                case "btnGI":
+                    OnHandlerRepaintMainPage(new EventArgsWithString { str = "GI" });
+                    break;
+                case "btnRecipies":
+                    OnHandlerRepaintMainPage(new EventArgsWithString { str = "Recipies" });
+                    break;
+                default:
+                    Console.WriteLine("Default case");
+                    break;
+            }
+            
         }
 
         ///EVENTS
@@ -56,6 +76,6 @@ namespace fox_food_vs.pages.home_page {
         protected virtual void OnHandlerRepaintMainPage(EventArgsWithString e) {
             HandlerRepaintMainPage?.Invoke(this, e);
         }
-
+        
     }
 }

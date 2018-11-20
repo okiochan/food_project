@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:fox_food_vs.pages.home_page"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300" Loaded="Page_Loaded"
+      d:DesignHeight="300" d:DesignWidth="500" Loaded="Page_Loaded"
       Title="HomePage">
 
     <StackPanel >
@@ -13,7 +13,14 @@
 
         <StackPanel x:Name="panelFirst" Orientation="Horizontal">
             <Image x:Name="imgFrige" Stretch="Fill"/>
-            <Button x:Name="btnFrige" Width="50" Click="btnFrige_Click">go to</Button>
+            <Button x:Name="btnFrige" Width="50" Click="btnGoToClick">goto</Button>
+
+            <Image x:Name="imgGI" Stretch="Fill"/>
+            <Button x:Name="btnGI" Width="50" Click="btnGoToClick">goto</Button>
+
+            <Image x:Name="imgRecipies" Stretch="Fill"/>
+            <Button x:Name="btnRecipies" Width="50" Click="btnGoToClick">goto</Button>
+
         </StackPanel>
         
     </StackPanel>

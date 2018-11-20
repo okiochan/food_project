@@ -22,14 +22,13 @@ namespace fox_food_vs.pages.frige_page
     /// </summary>
     public partial class EditPage : Page
     {
-        private List<FoodType> foods;
         public EditPage()
         {
             InitializeComponent();
         }
 
         private void btnAddFolder_Click(object sender, RoutedEventArgs e) {
-            FoodFolder ff = new FoodFolder();
+            Folder ff = new Folder();
             AddFolderWindow wind = new AddFolderWindow(ff);
 
             if (wind.ShowDialog() == true) {
