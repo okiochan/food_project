@@ -16,6 +16,7 @@ namespace fox_food_vs {
         public MainWindow() {
 
             //AddFolderWindowTest.Test();
+            //Environment.Exit(0);
 
             //Folder ff = new Folder();
             //AddFolderWindow wnd = new AddFolderWindow(ff);

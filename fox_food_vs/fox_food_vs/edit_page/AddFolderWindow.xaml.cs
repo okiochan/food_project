@@ -34,11 +34,14 @@ namespace fox_food_vs.pages.frige_page {
             foreach (FileInfo imageFile in imageFiles) {
 
                 // read the bitmap
-                FileStream imageReader = new FileStream(imageFile.FullName, FileMode.Open, FileAccess.Read);
                 BitmapImage bitmap = new BitmapImage();
-                bitmap.BeginInit();
-                bitmap.StreamSource = imageReader;
-                bitmap.EndInit();
+                using (FileStream imageReader = new FileStream(imageFile.FullName, FileMode.Open, FileAccess.Read)) {
+                    bitmap.BeginInit();
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.StreamSource = imageReader;
+                    bitmap.EndInit();
+                    bitmap.Freeze(); // optional
+                }
 
                 // contruct the image
                 FoodImage image = new FoodImage(id, imageFile.Name);
