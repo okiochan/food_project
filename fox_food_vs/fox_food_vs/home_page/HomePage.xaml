@@ -12,14 +12,17 @@
         <Image x:Name="img" Stretch="Fill"/>
 
         <StackPanel x:Name="panelFirst" Orientation="Horizontal">
-            <Image x:Name="imgFrige" Stretch="Fill"/>
-            <Button x:Name="btnFrige" Width="50" Click="btnGoToClick">goto</Button>
+            <Border BorderThickness="2">
+                <Image x:Name="imgFrige" Stretch="Fill" MouseEnter="HandleMouseEnter" MouseLeave="HandleMouseLeave" MouseUp="HandleClick"/>
+            </Border>
 
-            <Image x:Name="imgGI" Stretch="Fill"/>
-            <Button x:Name="btnGI" Width="50" Click="btnGoToClick">goto</Button>
+            <Border BorderThickness="2">
+                <Image x:Name="imgGI" Stretch="Fill" MouseEnter="HandleMouseEnter" MouseLeave="HandleMouseLeave" MouseUp="HandleClick"/>
+            </Border>
 
-            <Image x:Name="imgRecipies" Stretch="Fill"/>
-            <Button x:Name="btnRecipies" Width="50" Click="btnGoToClick">goto</Button>
+            <Border BorderThickness="2">
+                <Image x:Name="imgRecipies" Stretch="Fill" MouseEnter="HandleMouseEnter" MouseLeave="HandleMouseLeave" MouseUp="HandleClick"/>
+            </Border>
 
         </StackPanel>
         

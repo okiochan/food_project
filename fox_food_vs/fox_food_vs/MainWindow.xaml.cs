@@ -14,6 +14,7 @@ namespace fox_food_vs {
     /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
+            //HomePageTest.Test();
 
             //AddFolderWindowTest.Test();
             //Environment.Exit(0);
