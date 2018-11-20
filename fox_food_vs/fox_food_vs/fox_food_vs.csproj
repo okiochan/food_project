@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="frige_page\ItemFrige.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,11 +75,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="classes\FoodFolder.cs" />
+    <Compile Include="classes\Folder.cs" />
     <Compile Include="classes\FoodType.cs" />
-    <Compile Include="DB\DBfunc.cs" />
+    <Compile Include="db\DBfunc.cs" />
     <Compile Include="edit_page\AddTypeWindow.xaml.cs">
       <DependentUpon>AddTypeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frige_page\ItemFrige.xaml.cs">
+      <DependentUpon>ItemFrige.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -99,7 +106,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyEventArgs\EventArgsWithString.cs" />
+    <Compile Include="event_args\EventArgsWithString.cs" />
     <Compile Include="edit_page\AddFolderWindow.xaml.cs">
       <DependentUpon>AddFolderWindow.xaml</DependentUpon>
     </Compile>

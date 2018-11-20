@@ -1,4 +1,7 @@
-﻿using fox_food_vs.MyEventArgs;
+﻿using fox_food_vs.classes;
+using fox_food_vs.DB;
+using fox_food_vs.frige_page;
+using fox_food_vs.MyEventArgs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +23,8 @@ namespace fox_food_vs.pages.frige_page
     /// </summary>
     public partial class FrigePage : Page
     {
+        private List<Folder> lst;
+
         public FrigePage()
         {
             InitializeComponent();
@@ -37,5 +42,32 @@ namespace fox_food_vs.pages.frige_page
             HandlerRepaintMainWind?.Invoke(this, e);
         }
 
+        private void Repaint() {
+            panelFolders.Children.Clear();
+
+            lst = DBfunc.ReadFoodFolders();
+            StackPanel sp = new StackPanel();
+            int cnt = 0;
+
+            foreach (var x in lst) {
+
+                if(cnt%10 == 0) {
+                    sp = new StackPanel();
+                    sp.Orientation = Orientation.Horizontal;
+                    panelFolders.Children.Add(sp);
+                }
+
+                Frame myFrame = new Frame();
+                myFrame.Margin = new Thickness(20, 20, 20, 20);
+                myFrame.Navigate(new ItemFrige(x));
+                sp.Children.Add(myFrame);
+
+                cnt++;
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e) {
+            Repaint();
+        }
     }
 }

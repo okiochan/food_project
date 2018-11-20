@@ -15,8 +15,8 @@ namespace fox_food_vs.DB {
             return conn;
         }
 
-        public static List<FoodFolder> ReadFoodFolders() {
-            List<FoodFolder> lst = new List<FoodFolder>();
+        public static List<Folder> ReadFoodFolders() {
+            List<Folder> lst = new List<Folder>();
             MySqlConnection conn = GetDBConnection();
             conn.Open();
 
@@ -28,12 +28,12 @@ namespace fox_food_vs.DB {
                 int id = reader.GetInt32("id");
                 string img = reader.GetString("img");
                 string title = reader.GetString("title");
-                lst.Add(new FoodFolder(id, img, title));
+                lst.Add(new Folder(id, img, title));
             }
             return lst;
         }
 
-        public static List<FoodType> ReadFoodTypes(FoodFolder ff) {
+        public static List<FoodType> ReadFoodTypes(Folder ff) {
             List<FoodType> lst = new List<FoodType>();
             MySqlConnection conn = GetDBConnection();
             conn.Open();
@@ -57,7 +57,7 @@ namespace fox_food_vs.DB {
             return lst;
         }
 
-        public static void InsertFoodFolder(FoodFolder ff) {
+        public static void InsertFoodFolder(Folder ff) {
 
             MySqlConnection conn = GetDBConnection();
             conn.Open();
@@ -66,7 +66,7 @@ namespace fox_food_vs.DB {
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@var1", ff.title);
-            cmd.Parameters.AddWithValue("@var2", ff.img);
+            cmd.Parameters.AddWithValue("@var2", ff.imgPath);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
         }

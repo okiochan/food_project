@@ -17,8 +17,8 @@ namespace fox_food_vs.pages.frige_page {
     {
         private const string IMAGE_PATH= @"..\..\..\img\food_folders_icons";
         
-        private FoodFolder ff;
-        public AddFolderWindow(FoodFolder ff)
+        private Folder ff;
+        public AddFolderWindow(Folder ff)
         {
             InitializeComponent();
             this.ff = ff;
@@ -74,13 +74,14 @@ namespace fox_food_vs.pages.frige_page {
         // save to DB
         private void btnApply_Click(object sender, RoutedEventArgs e) {
             ff.title = txtTitle.Text;
-            ff.img = "none";
+            ff.imgPath = "none";
             DialogResult = true;
         }
 
         private void btnDiscard_Click(object sender, RoutedEventArgs e) {
             DialogResult = false;
         }
+
         private class FoodImage : Image {
             public FoodImage(int id) {
                 this.id = id;

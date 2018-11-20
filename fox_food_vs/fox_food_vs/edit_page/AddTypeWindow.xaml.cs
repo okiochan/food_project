@@ -43,7 +43,7 @@ namespace fox_food_vs.frige_page
 
         private void Window_Loaded(object sender, RoutedEventArgs e) {
             
-            List<FoodFolder> lst = DBfunc.ReadFoodFolders();
+            List<Folder> lst = DBfunc.ReadFoodFolders();
             ids = new int[lst.Count];
 
             for(int i = 0; i < lst.Count; i++) {

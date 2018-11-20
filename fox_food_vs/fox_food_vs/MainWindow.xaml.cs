@@ -4,6 +4,7 @@ using fox_food_vs.MyEventArgs;
 using fox_food_vs.pages.frige_page;
 using fox_food_vs.pages.home_page;
 using MySql.Data.MySqlClient;
+using System;
 using System.IO;
 using System.Windows;
 using static fox_food_vs.pages.home_page.HomePage;
@@ -26,29 +27,6 @@ namespace fox_food_vs {
             //    str = str + ", " + file.Name;
             //}
 
-            //READER
-            //var c = DBfunc.GetDBConnection();
-            //c.Open();
-            //string sql = " SELECT * FROM tbFoodFolder  ";
-            //MySqlCommand cmd = new MySqlCommand(sql, c);
-            //MySqlDataReader reader = cmd.ExecuteReader();
-            //while (reader.Read()) {
-            //    int txt = reader.GetInt32("id");
-            //    string txt2 = reader.GetString("img");
-            //}
-
-            //INSERT
-            //MySqlConnection conn = DBfunc.GetDBConnection();
-            //conn.Open();
-            //string query = "insert into tbFoodFolder (title,img) values (@var1,@var2)";
-            //MySqlCommand cmd = new MySqlCommand(query, conn);
-            //cmd.Parameters.AddWithValue("@var1", "dfsdf");
-            //cmd.Parameters.AddWithValue("@var2", "aaasas");
-            //cmd.Prepare();
-            //cmd.ExecuteNonQuery();
-
-
-
             InitializeComponent();
         }
 
@@ -69,6 +47,12 @@ namespace fox_food_vs {
                 case "Edit":
                     EditPage ep = new EditPage();
                     mainFrame.Navigate(ep);
+                    break;
+                case "GI":
+                    Console.WriteLine("create GI");
+                    break;
+                case "Recipies":
+                    Console.WriteLine("create Recipies");
                     break;
                 default:
                     HomePage page = new HomePage();
