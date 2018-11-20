@@ -41,7 +41,7 @@ namespace fox_food_vs.pages.frige_page {
                 bitmap.EndInit();
 
                 // contruct the image
-                FoodImage image = new FoodImage(id);
+                FoodImage image = new FoodImage(id, imageFile.Name);
                 image.Source = bitmap;
                 image.MaxHeight = 100;
                 image.MaxWidth = 100;
@@ -72,20 +72,23 @@ namespace fox_food_vs.pages.frige_page {
         }
         
         // save to DB
-        private void btnApply_Click(object sender, RoutedEventArgs e) {
-            ff.title = txtTitle.Text;
-            ff.imgPath = "none";
+        private void ApplyClick(object sender, RoutedEventArgs e) {
+            ff.title = titleText.Text;
+            if(selected != null) {
+                ff.imgPath = selected.imageName;
+            }
             DialogResult = true;
         }
 
-        private void btnDiscard_Click(object sender, RoutedEventArgs e) {
+        private void DiscardClick(object sender, RoutedEventArgs e) {
             DialogResult = false;
         }
 
         private class FoodImage : Image {
-            public FoodImage(int id) {
+            public FoodImage(int id, string imageName) {
                 this.id = id;
                 MouseDown += ImageClicked;
+                this.imageName = imageName;
             }
 
             void ImageClicked(object sender, MouseEventArgs e) {
@@ -95,6 +98,7 @@ namespace fox_food_vs.pages.frige_page {
             }
 
             public event EventHandler ImageSelected;
+            public string imageName;
             public int id;
         }
     }
