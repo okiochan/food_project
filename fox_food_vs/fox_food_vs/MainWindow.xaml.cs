@@ -3,11 +3,10 @@ using fox_food_vs.DB;
 using fox_food_vs.MyEventArgs;
 using fox_food_vs.pages.frige_page;
 using fox_food_vs.pages.home_page;
-using MySql.Data.MySqlClient;
+using fox_food_vs.Tests;
 using System;
-using System.IO;
+using System.Collections.Generic;
 using System.Windows;
-using static fox_food_vs.pages.home_page.HomePage;
 
 namespace fox_food_vs {
     /// <summary>
@@ -15,6 +14,8 @@ namespace fox_food_vs {
     /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
+
+            //AddFolderWindowTest.Test();
 
             //Folder ff = new Folder();
             //AddFolderWindow wnd = new AddFolderWindow(ff);

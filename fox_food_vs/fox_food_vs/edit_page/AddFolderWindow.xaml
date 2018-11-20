@@ -9,10 +9,10 @@
 
     <StackPanel>
 
-        <TextBlock  HorizontalAlignment="Center" Text="add folder" FontWeight="Bold"  FontSize="15"/>
+        <TextBlock  HorizontalAlignment="Center" Text="Add Folder" FontWeight="Bold"  FontSize="15"/>
 
-        <TextBlock  HorizontalAlignment="Center" Text="set title" FontSize="15"/>
-        <TextBox x:Name="txtTitle" Text="unknown"></TextBox>
+        <TextBlock  HorizontalAlignment="Center" Text="Set Title" FontSize="15"/>
+        <TextBox x:Name="titleText" Text="unknown"></TextBox>
 
         <TextBlock  HorizontalAlignment="Center" Text="choose icon" FontSize="15"/>
 
@@ -20,8 +20,8 @@
         </WrapPanel>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Margin="10" x:Name="btnApply" Click="btnApply_Click">apply</Button>
-            <Button Margin="10" x:Name="btnDiscard" Click="btnDiscard_Click">discard</Button>
+            <Button Margin="10" x:Name="applyButton" Click="ApplyClick">apply</Button>
+            <Button Margin="10" x:Name="discardButton" Click="DiscardClick">discard</Button>
         </StackPanel>
 
     </StackPanel>

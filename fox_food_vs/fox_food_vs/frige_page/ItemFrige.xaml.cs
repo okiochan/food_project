@@ -20,7 +20,7 @@ namespace fox_food_vs.frige_page {
 
             if(ff.imgPath != "none") {
                 var bitmap = new BitmapImage();
-                using (var stream = new FileStream(ff.imgPath, FileMode.Open)) {
+                using (var stream = new FileStream(@"..\..\..\img\food_folders_icons\" + ff.imgPath, FileMode.Open)) {
                     bitmap.BeginInit();
                     bitmap.CacheOption = BitmapCacheOption.OnLoad;
                     bitmap.StreamSource = stream;
